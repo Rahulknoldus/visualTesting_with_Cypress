@@ -1,0 +1,33 @@
+{
+  "name": "cypress_visual",
+  "version": "1.0.0",
+  "description": "Cypress Visual Testing Example",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run --env type=actual",
+    "base": "./node_modules/.bin/cypress run --env type=base",
+    "cy:run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:clean": "cypress cache clear",
+    "cy:record": "cypress run --record",
+    "cy:run:visual": "cypress run --spec 'cypress/integration/visual.spec.js'",
+    "cy:run:all": "cypress run --spec 'cypress/integration/*.spec.js'",
+    "cy:ci": "npm run cy:run -- --record",
+    "cy:open:ci": "npm run cy:open -- --record"
+  },
+  "keywords": [
+    "Cypress",
+    "Visual Testing"
+  ],
+  "author": "Rahul",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/webpack-preprocessor": "^5.17.1",
+    "cypress": "^13.3.3",
+    "cypress-image-diff-js": "^1.31.0",
+    "cypress-visual-regression": "^3.0.0"
+  },
+  "dependencies": {
+    "cypress-visual-regression": "^3.0.0"
+  }
+}
